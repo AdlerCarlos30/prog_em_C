@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/alunoibc/Desktop/#MSI_AdlerCarlos/Programaçao em C/prog_em_C",
-      "program": "c:/Users/alunoibc/Desktop/#MSI_AdlerCarlos/Programaçao em C/prog_em_C/build/Debug/outDebug",
+      "cwd": "c:/Users/alunoibc/Videos/#MSI_AdlerCarlos/Programaçao em C/prog_em_C/Atividades em C",
+      "program": "c:/Users/alunoibc/Videos/#MSI_AdlerCarlos/Programaçao em C/prog_em_C/Atividades em C/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
@@ -20,5 +20,5 @@
         }
       ]
     }
-  ] 
+  ]
 }
