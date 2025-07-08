@@ -5,7 +5,7 @@ int main () {
     char nomeCompleto [100];
     int idade;
     char genero;
-    char cpf [11];
+    char cpf [15];
     char telefone [30];
     char email [50];
     float peso;
@@ -17,13 +17,13 @@ int main () {
     printf("Digite sua Idade: ");
     scanf("%d", &idade);
 
-    printf("Informe seu Gênero: ");
-    scanf("%c", &genero);
+    printf("Informe seu Gênero (M/F/O): ");
+    scanf(" %c", &genero);
 
-     printf("Informe seu CPF: ");
+     printf("Informe seu CPF (apenas números): ");
     scanf("%s", &cpf);
 
-     printf("Informe seu Telefone: ");
+     printf("Informe seu Telefone (apenas números): ");
     scanf("%s", &telefone);
 
      printf("Informe seu e-mail: ");
@@ -35,8 +35,7 @@ int main () {
      printf("Informe sua Altura: ");
     scanf("%f", &altura);
 
-    printf("Usuario %s Idade %d Gênero: %c CPF: %s Telefone: %s e-mail: %s Peso de %.2f e Altura de %.2f",
-    nomeCompleto, idade, genero, cpf, telefone, email, peso, altura);
+    printf("\nUsuario: %s \nIdade %d \nGênero: %c \nCPF: %s \nTelefone: %s \ne-mail: %s \nPeso: %.2f \nAltura: %.2f\n", nomeCompleto, idade, genero, cpf, telefone, email, peso, altura);
 
 
 return 0;
