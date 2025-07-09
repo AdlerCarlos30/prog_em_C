@@ -1,25 +1,39 @@
 #include <stdio.h>
 
     int main (){
-        int num1; /*primeira variavel tipo inteiro*/
-        int num2; /*segunda variavel tipo inteiro*/
+        int num1, num2; /*variaveis tipo inteiro*/
 
-        printf("Digite um Número"); /**/
+        /*Solicita os números ao usuário*/
+        printf("Digite um Valor: "); 
         scanf("%d", &num1);
 
-        printf("Digite um Número");
+        printf("Digite outro Valor: ");
         scanf("%d", &num2);
 
-        if (num1 == num2) {
-            printf("Os Números são Iguais %d, %d", num1,  num2);/* igualdade */
-        }
-        else{
-            printf("Os Números são Diferentes: %d, %d", num1, num2); /* diferença */
-        }
-
-        if (num1 > num2) {
-            printf("O primero Número %d, %d",  num1, num2)/* code */
-        }
-        
-        
+         /*Começam as comparações*/
+    if (num1 == num2) {
+        printf("%d é igual a %d\n", num1, num2);
     }
+
+    if (num1 != num2) {
+        printf("%d é diferente de %d\n", num1, num2);
+    }
+
+    if (num1 > num2) {
+        printf("%d é maior que %d\n", num1, num2);
+    }
+
+    if (num1 < num2) {
+        printf("%d é menor que %d\n", num1, num2);
+    }
+
+    if (num1 >= num2) {
+        printf("%d é maior ou igual a %d\n", num1, num2);
+    }
+
+    if (num1 <= num2) {
+        printf("%d é menor ou igual a %d\n", num1, num2);
+    }
+
+    return 0;
+}
