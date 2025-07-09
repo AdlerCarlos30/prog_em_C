@@ -1,10 +1,10 @@
 #include <stdio.h>
 
     int main (){
-        int num1;
-        int num2;
+        int num1; /*primeira variavel tipo inteiro*/
+        int num2; /*segunda variavel tipo inteiro*/
 
-        printf("Digite um Número");
+        printf("Digite um Número"); /**/
         scanf("%d", &num1);
 
         printf("Digite um Número");
