@@ -7,7 +7,7 @@ int main () {
     scanf("%d", &idade);
 
     printf("Você tem Ingresso (0Não/1Sim): ");
-    scanf("%c", &ingresso);
+    scanf("%d", &temIngresso);
 
     if(idade >= 14 && temIngresso == 1) {
         printf("Entrada Permitida");
