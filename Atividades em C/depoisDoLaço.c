@@ -10,6 +10,5 @@ for(contador; contador >= 0; contador--)
 {
 printf("\n%d\n", contador);
 }
-
     return 0;
 }
