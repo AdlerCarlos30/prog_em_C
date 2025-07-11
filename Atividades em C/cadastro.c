@@ -1,43 +1,31 @@
+//Adler Brito Carlos
 #include <stdio.h>
 #include <string.h>
 
-int main () {
-    char nomeCompleto [100];
+int main() {
+    char nome [50];
     int idade;
-    char genero;
-    char cpf [15];
-    char telefone [30];
-    char email [50];
-    float peso;
-    float altura;
+    int estudante;
+    const float valorBase = 100.0;
 
-    printf("Digite seu Nome Completo: ");
-    fgets(nomeCompleto,sizeof(nomeCompleto), stdin);
+    printf("Escreva seu Nome Completo: ");
+    fgets(nome,sizeof(nome), stdin);
 
-    printf("Digite sua Idade: ");
+    printf("Você é Estudante (0Não/1Sim): ");
+    scanf("%d", &estudante);
+    
+     printf("Digite sua Idade: ");
     scanf("%d", &idade);
 
-    printf("Informe seu Gênero (M/F/O): ");
-    scanf(" %c", &genero);
-
-     printf("Informe seu CPF (apenas números): ");
-    scanf("%s", &cpf);
-
-     printf("Informe seu Telefone (apenas números): ");
-    scanf("%s", &telefone);
-
-     printf("Informe seu e-mail: ");
-    scanf("%s", &email);
-
-     printf("Informe seu Peso: ");
-    scanf("%f", &peso);
-
-     printf("Informe sua Altura: ");
-    scanf("%f", &altura);
-
-    printf("\nUsuario: %s \nIdade %d \nGênero: %c \nCPF: %s \nTelefone: %s \ne-mail: %s \nPeso: %.2f \nAltura: %.2f\n", nomeCompleto, idade, genero, cpf, telefone, email, peso, altura);
-
-
-return 0;
-  
+    printf("\nNome: %sIdade: %d\nEstudante (0Não/1Sim): %d\n", nome, idade, estudante);
+    
+    if(idade < 18 || estudante == 1) {
+        printf("\nOla %s, você recebeu um desconto de R$ 50.00 no Valor Base de R$ %.2f.", nome, valorBase);
+        printf("\nValor Final: R$ 50.00");
+    
+    }
+    else {
+        printf("\nOla %s, você não recebe desconto. Pague o valor de R$ %.2f\n.", valorBase);
+    }
+    return 0;
 }
