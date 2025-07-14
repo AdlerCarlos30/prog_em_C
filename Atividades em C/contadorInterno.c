@@ -3,7 +3,6 @@
 int main () {
     int contador, contadorInterno;
     
-    //faz a contagem de 2 em 2
     for(contador = 1; contador <= 5; contador++) {
 
         for (contadorInterno = 1; contadorInterno <= 5; contadorInterno++) {
