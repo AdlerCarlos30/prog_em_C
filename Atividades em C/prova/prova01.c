@@ -3,22 +3,22 @@
 #include <string.h>
 
 int main() {
-    char nome = [50];
+    char nome  [50];
     int idade;
-    char estudante;
+    int estudante;
     const float valorBase = 100.0;
 
     printf("Escreva seu Nome Completo: ");
     fgets(nome,sizeof(nome), stdin);
 
     printf("Digite sua Idade: ");
-    sacanf("%d", &idade);
+    scanf("%d", &idade);
 
     printf("Você é Estudante (0Não/1Sim): ");
-    scanf("%c", &estudante);
+    scanf("%d", &estudante);
 
-    if(idade < 18 && estudante == 1) {
-        printf("Você Recebeu 50% de desconto.");
+    if(idade < 18 ||estudante == 1) {
+        printf("Você Recebeu desconto de 50%.");
     } else {
         printf("Você não Recebe Desconto.");
     }
