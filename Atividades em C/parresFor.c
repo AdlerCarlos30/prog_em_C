@@ -6,6 +6,7 @@ int main() {
     for (int x = 0; x < 10; x++) {
         printf("Digite o %dº número: ", x + 1);
         scanf("%d", &num);
+        getchar();
 
         if (num % 2 == 0) {
             pares++;

@@ -6,6 +6,7 @@ int main() {
     while (x < 10) {
         printf("Digite o %dº número: ", x + 1);
         scanf("%d", &num);
+        gerchar();
 
         if (num % 2 == 0) {
             pares++;
