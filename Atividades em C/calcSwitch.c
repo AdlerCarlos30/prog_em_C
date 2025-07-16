@@ -26,22 +26,22 @@ switch(opcao) {
     
     case 1:
     resultado = x + y;
-    printf("O Resultado da soma é: %.1f\n", resultado);
+    printf("O Resultado da soma é: %.0f\n", resultado);
     break;
     
     case 2:
     resultado = x - y;
-    printf("O Resultado da subitração é: %.1f\n", resultado);
+    printf("O Resultado da subitração é: %.0f\n", resultado);
     break;
     
     case 3:
     resultado = x * y;
-    printf("O Resultado da multiplicação é: %.1f\n", resultado);
+    printf("O Resultado da multiplicação é: %.0f\n", resultado);
     break;
     
     case 4:
     resultado = x / y;
-    printf("O Resultado da divião é: %.2f\n", resultado);
+    printf("O Resultado da divião é: %.1f\n", resultado);
     break;
     
     case 0:
