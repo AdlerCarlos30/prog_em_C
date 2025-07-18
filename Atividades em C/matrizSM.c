@@ -6,7 +6,7 @@ int main() {
 
     // Variáveis para armazenar os resultados
     int soma = 0;
-    int produto = 1;
+    int mult = 1;
 
     // ===== Entrada dos valores =====
     printf("=== Digite os valores para a matriz 2x2 ===\n"); 
@@ -17,7 +17,7 @@ int main() {
 
             // Acumula a soma e o produto dos elementos
             soma += matriz[linha][coluna];
-            produto *= matriz[linha][coluna]; 
+            mult *= matriz[linha][coluna]; 
             
         } 
         
@@ -36,7 +36,7 @@ int main() {
 
     // ===== Exibição dos resultados =====
     printf("\nSoma de todos os elementos: %d\n", soma);
-    printf("Multiplicação de todos os elementos: %d\n", produto);
+    printf("Multiplicação de todos os elementos: %d\n", mult);
 
     return 0; 
     
