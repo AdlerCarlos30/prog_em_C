@@ -6,9 +6,9 @@
       "type": "shell",
       "command": "C:/MinGW/bin/gcc.exe",
       "args": [
-        "main.c",
+        "${file}",
         "-o",
-        "main"
+        "${fileDirname}/exec_${fileBasenameNoExtension}.exe"
       ],
       "group": {
         "kind": "build",
