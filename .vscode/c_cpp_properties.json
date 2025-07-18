@@ -3,7 +3,9 @@
     {
       "name": "windows-gcc-x64",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${workspaceFolder}/**",
+        "C:/MinGW/include",
+        "C:/MinGW/lib/gcc/mingw32/6.3.0/include"
       ],
       "defines": [
         "_DEBUG",
@@ -11,9 +13,9 @@
         "_UNICODE"
       ],
       "windowsSdkVersion": "10.0.19041.0",
-      "compilerPath": "gcc",
-      "cStandard": "${default}",
-      "cppStandard": "${default}",
+      "compilerPath": "C:/MinGW/bin/gcc.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
       "intelliSenseMode": "windows-gcc-x64"
     }
   ],

@@ -5,7 +5,7 @@
       "name": "Depurar C",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/main",
+      "program": "${workspaceFolder}/main.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -20,7 +20,7 @@
         }
       ],
       "preLaunchTask": "Compilar C",
-      "miDebuggerPath": "/usr/bin/gdb"
+      "miDebuggerPath": "C:/MinGW/bin/gdb.exe"
     }
   ]
 }
