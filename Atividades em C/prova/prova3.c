@@ -25,14 +25,19 @@ int main() {
             
             case 1:
             int linha, coluna, novoValor;
-     printf("\t\tperifericos de entrada\t");
-     printf("\t\tperifericos de entrada\t");
-     printf("\t\tperifericos de entrada\t");
-     printf("\t\tperifericos de entrada\t");
+    printf("\n\t\t\t\t\t\t\t\t\tProdutos\n\n");
+     printf("\t\t\t\tnotebooks Dell\t");
+     printf("\t\t\tmonitores\t");
+     printf("\t\t\tnotebook HP\t\t\n");
+     printf("\nnotebooks");
+     printf("\nmonitores");
+     printf("\nimpressoras");
+     
      for(int lin = 0; lin < 4; lin++) {
          for(int col = 0; col < 3; col++) {
              
-     printf("%d ", matriz[lin][col]);
+      printf("\t\t\t\t\t\t\t\t\t%d ", matriz[lin][col]);
+             
          }
 
 printf("\n");
