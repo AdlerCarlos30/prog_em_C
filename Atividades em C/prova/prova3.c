@@ -47,7 +47,7 @@ printf("\n");
             
             case 2:
             
-            printf("\nInforme o número da linha (0 a 1):");
+            printf("\nInforme o número da linha (0 a 3):");
     scanf("%d", &linha);
 
     printf("Informe o número da coluna (0 a 2):");
