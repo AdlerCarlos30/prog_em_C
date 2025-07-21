@@ -5,15 +5,13 @@ int main() {
     int opcao, rpt;
     int linha, coluna, novoValor;
 
-    // Matriz representando o estoque de produtos
     int matriz[4][3] = {
-        {10, 8, 6},    // Notebooks
-        {9, 5, 6},     // Monitores
-        {5, 7, 6},     // Impressoras
-        {6, 7, 2}      // Acessórios
+        {7, 8, 6},
+        {9, 5, 6},
+        {5, 7, 6},
+        {6, 7, 2}
     };
 
-    // Nomes das linhas e colunas para melhor identificação
     const char *categorias[3] = {"Notebooks Dell", "Monitores", "Notebook HP"};
     const char *linhas[4] = {"Notebooks", "Monitores", "Impressoras", "Acessórios"};
 
@@ -33,7 +31,7 @@ int main() {
                 printf("\t\t%-18s %-12s %-12s\n", categorias[0], categorias[1], categorias[2]);
 
                 for (int lin = 0; lin < 4; lin++) {
-                    printf("%-12s\t", linhas[lin]);
+                    printf("%-18s\t", linhas[lin]);
                     for (int col = 0; col < 3; col++) {
                         printf("%-12d", matriz[lin][col]);
                     }
@@ -54,8 +52,13 @@ int main() {
 
                 printf("Valor atual de [%d][%d] (%s - %s): %d\n",
                        linha, coluna, linhas[linha], categorias[coluna], matriz[linha][coluna]);
-                printf("Informe o novo valor: ");
+                printf("Informe o novo valor (>= 0): ");
                 scanf("%d", &novoValor);
+
+                if (novoValor < 0) {
+                    printf("Valor inválido! Estoque não pode ser negativo.\n");
+                    break;
+                }
 
                 if (matriz[linha][coluna] == 0 && novoValor > 0) {
                     printf("Produto estava com estoque zerado. Reposição realizada!\n");
@@ -67,20 +70,47 @@ int main() {
 
             case 3: {
                 int encontrouZerado = 0;
-                printf("\nItens com estoque zerado:\n");
+                printf("\nProdutos com estoque zerado:\n\n");
 
                 for (int lin = 0; lin < 4; lin++) {
                     for (int col = 0; col < 3; col++) {
                         if (matriz[lin][col] == 0) {
                             encontrouZerado = 1;
-                            printf(" - Linha %d (%s), Coluna %d (%s)\n",
-                                   lin, linhas[lin], col, categorias[col]);
+                            printf(" - [%d][%d] %s - %s\n", lin, col, linhas[lin], categorias[col]);
                         }
                     }
                 }
 
                 if (!encontrouZerado) {
                     printf("Nenhum item com estoque zerado.\n");
+                } else {
+                    int atualizar;
+                    printf("\nDeseja atualizar algum produto zerado? (1 - Sim / 0 - Não): ");
+                    scanf("%d", &atualizar);
+
+                    if (atualizar == 1) {
+                        printf("Informe a linha (0 a 3): ");
+                        scanf("%d", &linha);
+                        printf("Informe a coluna (0 a 2): ");
+                        scanf("%d", &coluna);
+
+                        if (linha < 0 || linha > 3 || coluna < 0 || coluna > 2) {
+                            printf("Posição inválida! Tente novamente.\n");
+                            break;
+                        }
+
+                        printf("Informe o novo valor para [%d][%d] (%s - %s): ",
+                               linha, coluna, linhas[linha], categorias[coluna]);
+                        scanf("%d", &novoValor);
+
+                        if (novoValor < 0) {
+                            printf("Valor inválido! Estoque não pode ser negativo.\n");
+                            break;
+                        }
+
+                        matriz[linha][coluna] = novoValor;
+                        printf("Estoque atualizado com sucesso!\n");
+                    }
                 }
                 break;
             }
@@ -116,8 +146,14 @@ int main() {
                 break;
         }
 
-        printf("\nDeseja voltar ao menu? (1 - Sim / 0 - Não): ");
-        scanf("%d", &rpt);
+        do {
+            printf("\nDeseja voltar ao menu? (1 - Sim / 0 - Não): ");
+            scanf("%d", &rpt);
+
+            if (rpt != 0 && rpt != 1) {
+                printf("Entrada inválida! Digite 1 para continuar ou 0 para sair.\n");
+            }
+        } while (rpt != 0 && rpt != 1);
 
     } while (rpt == 1);
 
