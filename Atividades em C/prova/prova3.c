@@ -36,14 +36,13 @@ int main() {
      for(int lin = 0; lin < 4; lin++) {
          for(int col = 0; col < 3; col++) {
              
-      printf("\t\t\t\t\t\t\t\t\t%d ", matriz[lin][col]);
+      printf("\t\t\t\t\t\t\t\t\t%d ", matriz[lin][col]); 
              
          }
 
 printf("\n");
      }
-            
-            break;
+             break;
             
             case 2:
             
@@ -70,25 +69,79 @@ printf("\n");
             break;
             
             case 3:
-            
+            if(matriz[0][0] == 0 && matriz[0][1] == 0 && matriz[0][2] == 0 &&
+               matriz[1][0] == 0 && matriz[1][1] == 0 && matriz[1][2] == 0 &&
+               matriz[2][0] == 0 && matriz[2][1] == 0 && matriz[2][2] == 0 &&
+               matriz[3][0] == 0 && matriz[3][1] == 0 && matriz[3][2] == 0)   {
+                  int linha, coluna, novoValor;
+    printf("\n\t\t\t\t\t\t\t\t\tProdutos\n\n");
+     printf("\t\t\t\tnotebooks Dell\t");
+     printf("\t\t\tmonitores\t");
+     printf("\t\t\tnotebook HP\t\t\n");
+     printf("\nnotebooks");
+     printf("\nmonitores");
+     printf("\nimpressoras"); 
+     
+     for(int lin = 0; lin < 4; lin++) {
+         for(int col = 0; col < 3; col++) {
+             
+      printf("\t\t\t\t\t\t\t\t\t%d ", matriz[lin][col]);
+             
+         }
+printf("\n");
+     }
+    } 
+            else {
+                printf("\nEstoque não está zerado.\n"); }
              break;
             
             case 4:
+            int total = 0;
+            for(int lin = 0; lin < 4; lin++) {
+                for(int col = 0; col < 3; col++) {
+                    total += matriz[lin][col];
+                }   
+            }
+            printf("\nTotal de produtos no estoque: %d\n", total);  
+            printf("\n\t\t\t\t\t\t\t\t\tProdutos\n\n");
+            printf("\t\t\t\tnotebooks Dell\t"); 
+            printf("\t\t\tmonitores\t");
+            printf("\t\t\tnotebook HP\t\t\n");
+            printf("\nnotebooks");
+            printf("\nmonitores");
+            printf("\nimpressoras");
+            for(int lin = 0; lin < 4; lin++) {
+                for(int col = 0; col < 3; col++) {
+                    printf("\t\t\t\t\t\t\t\t\t%d ", matriz[lin][col]);
+                }
+                printf("\n");   
+            }   
+            printf("\nTotal de produtos por categoria: %d\n", total);
+
             
              break;
             
             case 0:
+            printf("Saindo do programa...\n");
+            rpt = 0; // Define rpt como 0 para sair do loop 
+            printf("Obrigado por utilizar o sistema!\n");
+            printf("Volte sempre!\n");
+            fflush(stdout); // Garante que a saída seja exibida antes de sair
+            fflush(stdin); // Limpa o buffer de entrada
+            getchar(); // Aguarda o usuário pressionar Enter antes de sair
             
             return 0; 
             
             default:
-            
+           
             printf("Opção inválida!\n");
+            printf("Por favor, escolha uma opção válida.\n");
+            break;
             
             
         }
     printf("\nDeseja voltar ao menu? (1 - Sim / 0 - Não): ");
-        scanf("%d", &rpt);
+        scanf("%d", &rpt); 
 
     } while (rpt == 1);
 
