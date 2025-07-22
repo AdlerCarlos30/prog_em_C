@@ -44,7 +44,7 @@ int main() {
         printf("Nota 1: %.2f\n", turma[lin].nota1);
         printf("Nota 2: %.2f\n", turma[lin].nota2);
         printf("Nota 3: %.2f\n", turma[lin].nota3);
-        printf("Nota 4: %.2f\n", turma[lin].nota4); 
+        printf("Nota 4: %.2f\n", turma[lin].nota4);
     }
 
     return 0;
