@@ -57,6 +57,8 @@ int main() {
         printf("Nome   : %s\n", pnt_nome);
         printf("Idade  : %d\n", *pnt_idade);
         printf("Altura : %.2f\n", *pnt_altura);
+        
+        printf("\n");
 
         printf("Endereço do Nome   : %p\n", pnt_nome);  
         printf("Endereço da Idade  : %p\n", pnt_idade);
