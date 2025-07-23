@@ -34,7 +34,7 @@ int main() {
     
     printf("\n ===== Dados das Pessoas ===== \n");
     for (int cont = 0; cont < 3; cont++) {
-        printf("\n____ Pessoa %d _____\n", cont + 1);
+        printf("\n ===== Pessoa %d ===== \n", cont + 1);
         printf("Nome   : %s\n", pessoas[cont].nomeCompleto);
         printf("Endereço do nome   : %p\n", &pessoas[cont].nomeCompleto); 
 
@@ -46,14 +46,14 @@ int main() {
         
     } 
     
-    printf("\n ===== Dados das Pessoas via Ponteiros ===== \n"); 
+    printf("\n ===== Dados Organizados ===== \n"); 
     
     for (int cont = 0; cont < 3; cont++) {
         pnt_idade = &pessoas[cont].idade;
         pnt_nome = pessoas[cont].nomeCompleto;
         pnt_altura = &pessoas[cont].altura;
 
-        printf("\n---- Pessoa %d ----\n", cont + 1);
+        printf("\n ===== Pessoa %d ===== \n", cont + 1);
         printf("Nome   : %s\n", pnt_nome);
         printf("Idade  : %d\n", *pnt_idade);
         printf("Altura : %.2f\n", *pnt_altura);
