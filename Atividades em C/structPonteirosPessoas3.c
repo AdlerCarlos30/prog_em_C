@@ -3,7 +3,7 @@
 
 typedef struct { 
     int idade;
-    char nomeCompleto[150];
+    char nomeCompleto[123];
     float altura; 
     
 } Pessoa; 
@@ -35,14 +35,14 @@ int main() {
     printf("\n ===== Dados das Pessoas ===== \n");
     for (int cont = 0; cont < 3; cont++) {
         printf("\n ===== Pessoa %d ===== \n", cont + 1);
-        printf("Nome   : %s\n", pessoas[cont].nomeCompleto);
-        printf("Endereço do nome   : %p\n", &pessoas[cont].nomeCompleto); 
+        printf("Nome: %s\n", pessoas[cont].nomeCompleto);
+        printf("Endereço do nome: %p\n", &pessoas[cont].nomeCompleto); 
 
-        printf("Idade  : %d\n", pessoas[cont].idade);
-        printf("Endereço da idade  : %p\n", &pessoas[cont].idade); 
+        printf("Idade: %d\n", pessoas[cont].idade);
+        printf("Endereço da idade: %p\n", &pessoas[cont].idade); 
 
-        printf("Altura : %.2f\n", pessoas[cont].altura);
-        printf("Endereço da altura : %p\n", &pessoas[cont].altura); 
+        printf("Altura: %.2f\n", pessoas[cont].altura);
+        printf("Endereço da altura: %p\n", &pessoas[cont].altura); 
         
     } 
     
@@ -54,15 +54,15 @@ int main() {
         pnt_altura = &pessoas[cont].altura;
 
         printf("\n ===== Pessoa %d ===== \n", cont + 1);
-        printf("Nome   : %s\n", pnt_nome);
-        printf("Idade  : %d\n", *pnt_idade);
-        printf("Altura : %.2f\n", *pnt_altura);
+        printf("Nome: %s\n", pnt_nome);
+        printf("Idade: %d\n", *pnt_idade);
+        printf("Altura: %.2f\n", *pnt_altura);
         
         printf("\n");
 
-        printf("Endereço do Nome   : %p\n", pnt_nome);  
-        printf("Endereço da Idade  : %p\n", pnt_idade);
-        printf("Endereço da Altura : %p\n", pnt_altura); 
+        printf("Endereço do Nome: %p\n", pnt_nome);  
+        printf("Endereço da Idade: %p\n", pnt_idade);
+        printf("Endereço da Altura: %p\n", pnt_altura); 
         
     }
 
